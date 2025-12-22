@@ -1,0 +1,55 @@
+# GOOGLE FORM SETUP INSTRUCTIONS
+
+## Quick Steps to Connect Your Enrollment Form
+
+### 1. Create Google Form
+   - Go to https://forms.google.com
+   - Create a new form named "Kranti Classes - Student Enrollment"
+   
+### 2. Add These 6 Questions (all required):
+   1. Student Full Name (Short answer)
+   2. Parent/Guardian Name (Short answer)
+   3. Mobile Number (WhatsApp) (Short answer)
+   4. Email Address (Short answer)
+   5. Current Class (Dropdown: Class 6, 7, 8, 9, 10, 11, 12)
+   6. Course Interested In (Dropdown: Foundation, Boards, JEE Preparation, NEET Preparation, Crash Course)
+
+### 3. Get Entry IDs
+   - Fill out your form with test data
+   - Open browser Developer Tools (Press F12)
+   - Go to Network tab
+   - Submit the form
+   - Find the "formResponse" request
+   - Click it and look at Payload section
+   - You'll see entry IDs like: entry.123456789
+   - Write down all 6 entry IDs
+
+### 4. Update Your Code
+   Open: src/pages/Admissions.tsx
+   
+   Find line 29 and replace:
+   const GOOGLE_FORM_URL = 'YOUR_GOOGLE_FORM_URL_HERE';
+   
+   With your form URL (change viewform to formResponse):
+   const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse';
+   
+   Then update lines 35-40 with your actual entry IDs:
+   formDataToSend.append('entry.YOUR_ID_1', formData.studentName);
+   formDataToSend.append('entry.YOUR_ID_2', formData.parentName);
+   formDataToSend.append('entry.YOUR_ID_3', formData.mobile);
+   formDataToSend.append('entry.YOUR_ID_4', formData.email);
+   formDataToSend.append('entry.YOUR_ID_5', formData.currentClass);
+   formDataToSend.append('entry.YOUR_ID_6', formData.course);
+
+### 5. Link to Google Sheets
+   - In your Google Form, click "Responses" tab
+   - Click the Google Sheets icon
+   - Create new spreadsheet
+   - All enrollments will save there automatically!
+
+### 6. Test
+   - Visit your website enrollment page
+   - Fill and submit the form
+   - Check your Google Sheet for the data
+
+NEED HELP? Contact me with any questions!
