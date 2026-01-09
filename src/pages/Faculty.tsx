@@ -4,7 +4,7 @@ import Card from '../components/ui/Card';
 
 const Faculty = () => {
     const facultyMembers = [
-        { name: "IlaKranti Gupta", role: "Sr. Physics Professor", exp: "7+ Years", img: "/IlakrantiFaculty.jpg" }
+        { name: "IlaKranti Gupta", role: "Sr. Physics Professor", exp: "7+ Years", img: "/IlakrantiFaculty.webp" }
     ];
 
     return (

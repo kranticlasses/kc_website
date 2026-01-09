@@ -4,7 +4,7 @@ import { Award, Users, TrendingUp, BookOpen } from 'lucide-react';
 const TrustBar = () => {
     const stats = [
         { icon: <Award size={32} />, label: "7+ Years", sub: "Experience" },
-        { icon: <Users size={32} />, label: "1000+", sub: "Students Trusted" },
+        { icon: <Users size={32} />, label: "10000+", sub: "Students Trusted Online+Offline" },
         { icon: <TrendingUp size={32} />, label: "Top Results", sub: "In JEE & NEET" },
         { icon: <BookOpen size={32} />, label: "Expert", sub: "Faculty Team" },
     ];

@@ -48,11 +48,11 @@ const Header = () => {
                         </Link>
                     ))}
                     <Link
-                        to="/scholarship"
-                        className="flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors"
+                        to="/contact"
+                        className="flex items-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-2.5 rounded-full font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border-2 border-orange-400"
                     >
                         <Award size={18} />
-                        <span>Scholarship</span>
+                        <span>Enroll Now</span>
                     </Link>
                 </nav>
 
@@ -80,12 +80,12 @@ const Header = () => {
                             </Link>
                         ))}
                         <Link
-                            to="/scholarship"
-                            className="flex items-center justify-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors"
+                            to="/contact"
+                            className="flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-2.5 rounded-full font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border-2 border-orange-400"
                             onClick={() => setIsOpen(false)}
                         >
                             <Award size={18} />
-                            <span>Scholarship</span>
+                            <span>Enroll Now</span>
                         </Link>
                     </div>
                 </div>

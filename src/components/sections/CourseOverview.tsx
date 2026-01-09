@@ -21,8 +21,8 @@ const CourseOverview = () => {
         },
         {
             title: "Competitive",
-            class: "JEE / NEET",
-            desc: "Rigorous coaching for IIT-JEE and NEET. Mock tests, doubt solving, and expert guidance.",
+            class: "JEE / NEET / OLYMPIAD / CUET",
+            desc: "Rigorous coaching for IIT-JEE, NEET, OLYMPIAD and CUET. Mock tests, doubt solving, and expert guidance.",
             icon: <Target size={40} className="text-purple-500" />,
             color: "bg-purple-50"
         }

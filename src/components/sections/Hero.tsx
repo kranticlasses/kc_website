@@ -21,9 +21,9 @@ const Hero = () => {
                             <Button to="/contact" variant="secondary" className="gap-2">
                                 Book Free Demo <ArrowRight size={18} />
                             </Button>
-                            <a 
-                                href="https://wa.me/917834932101" 
-                                target="_blank" 
+                            <a
+                                href="https://wa.me/917834932101"
+                                target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium transition-colors bg-[#25D366] hover:bg-[#128C7E] text-white"
                             >
@@ -34,12 +34,12 @@ const Hero = () => {
                     </div>
 
                     <div className="md:w-1/2 flex justify-center">
-                        <div className="relative">
+                        <div className="relative w-80 h-full aspect-square">
                             <div className="absolute -inset-4 bg-orange-500 rounded-full opacity-20 blur-2xl animate-pulse"></div>
                             <img
-                                src="/student.png"
-                                alt="Happy Student"
-                                className="relative rounded-2xl shadow-2xl border-4 border-white/20 max-w-md w-full transform hover:scale-105 transition-transform duration-500 object-cover h-full max-h-[400px]"
+                                src="/IlakrantiFaculty.webp"
+                                alt="Students and teacher at Kranti Classes in Ahmedabad preparing for JEE, NEET and board exams"
+                                className="relative rounded-2xl shadow-2xl border-4 border-white/20 max-w-md w-full transform hover:scale-105 transition-transform duration-500 object-cover object-top h-full max-h-[400px]"
                             />
                         </div>
                     </div>

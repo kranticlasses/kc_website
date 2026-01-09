@@ -14,7 +14,7 @@ const About = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
                     <div>
                         <img
-                            src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                            src="/AboutImg.webp"
                             alt="Our Mission"
                             className="rounded-lg shadow-xl"
                         />
