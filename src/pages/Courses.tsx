@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+import FlagshipProgram from '../components/sections/FlagshipProgram';
 
 const Courses = () => {
     const [activeTab, setActiveTab] = useState<'foundation' | 'competitive'>('foundation');
@@ -15,9 +16,9 @@ const Courses = () => {
     ];
 
     const competitiveCourses = [
-        { name: "JEE Main + Advanced", target: "Class 11 & 12"},
-        { name: "NEET UG", target: "Class 11 & 12"},
-        { name: "Crash Course (JEE/NEET)", target: "Class 12 Pass"},
+        { name: "JEE Main + Advanced", target: "Class 11 & 12", duration: "1/2 Years" },
+        { name: "NEET UG", target: "Class 11 & 12", duration: "1/2 Years" },
+        { name: "Crash Course (JEE/NEET)", target: "Class 12 Pass", duration: "6 Months" },
     ];
 
     return (
@@ -26,6 +27,10 @@ const Courses = () => {
                 <title>Courses | Kranti Classes</title>
                 <meta name="description" content="Explore our courses for Foundation (Class 6-10) and Competitive Exams (JEE/NEET)." />
             </Helmet>
+
+            {/* Flagship Program Section */}
+            <FlagshipProgram />
+
             <div className="container mx-auto px-4 py-12">
                 <h1 className="text-4xl font-bold text-center mb-12 text-blue-900">Our Courses</h1>
 
@@ -46,7 +51,7 @@ const Courses = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                     {activeTab === 'foundation' ? (
                         foundationCourses.map((course, index) => (
                             <Card key={index} className="p-6 border-t-4 border-blue-500">
