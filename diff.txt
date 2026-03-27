@@ -1,0 +1,23 @@
+﻿diff --git a/src/pages/Home.tsx b/src/pages/Home.tsx
+index c423102..dfb60e6 100644
+--- a/src/pages/Home.tsx
++++ b/src/pages/Home.tsx
+@@ -1,9 +1,9 @@
+-import React from 'react';
+ import { Helmet } from 'react-helmet-async';
+ import Hero from '../components/sections/Hero';
+ import TrustBar from '../components/sections/TrustBar';
+ import CourseOverview from '../components/sections/CourseOverview';
+ import ToppersSpotlight from '../components/sections/ToppersSpotlight';
++import AnnouncementPopup from '../components/AnnouncementPopup';
+ 
+ const Home = () => {
+     return (
+@@ -13,6 +13,7 @@ const Home = () => {
+                 <meta name="description" content="Kranti Classes offers expert coaching for Class 6-12, JEE, and NEET. Join us to shape your future with top results and experienced faculty." />
+             </Helmet>
+             <main>
++                <AnnouncementPopup />
+                 <Hero />
+                 <TrustBar />
+                 <CourseOverview />

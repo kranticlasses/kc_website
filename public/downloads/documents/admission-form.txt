@@ -1,0 +1,24 @@
+KRANTI CLASSES - ADMISSION FORM
+
+This is a sample admission form document. Please replace with your actual admission form.
+
+STUDENT INFORMATION:
+Name: ______________________
+Class: ______________________
+Date of Birth: ______________
+Contact Number: ____________
+Email: _____________________
+
+PARENT INFORMATION:
+Father's Name: ______________
+Mother's Name: ______________
+Contact: ___________________
+
+COURSE SELECTION:
+☐ JEE Main & Advanced
+☐ NEET
+☐ Foundation Course
+☐ Board Exam Preparation
+
+Submit this form at Kranti Classes office.
+Contact: [Your Contact Information]
