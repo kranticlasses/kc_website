@@ -1,7 +1,8 @@
-import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
 import { BookOpen, BarChart2, Target, Clock, Award, CheckCircle } from 'lucide-react';
 import Card from '../components/ui/Card';
+import OurAchievers from '../components/sections/OurAchievers';
 
 const Results = () => {
     return (
@@ -19,6 +20,8 @@ const Results = () => {
                     </p>
                     <div className="w-24 h-1.5 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full"></div>
                 </div>
+
+                <OurAchievers />
 
                 <div className="grid md:grid-cols-2 gap-8 mb-16">
                     <Card className="p-8 hover:shadow-lg transition-shadow duration-300">
