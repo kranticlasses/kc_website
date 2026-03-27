@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Card from '../components/ui/Card';
+import { Link } from 'react-router-dom';
 
 const Faculty = () => {
     const facultyMembers = [
@@ -29,7 +30,12 @@ const Faculty = () => {
                                 </div>
                                 <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
                                 <p className="text-blue-600 font-medium mb-2">{member.role}</p>
-                                <p className="text-gray-500 text-sm">{member.exp} Experience</p>
+                                <p className="text-gray-500 text-sm mb-4">{member.exp} Experience</p>
+                                <Link to="/faculty/ilakranti-gupta">
+                                    <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-colors duration-300">
+                                        View Profile
+                                    </button>
+                                </Link>
                             </Card>
                         ))}
                     </div>

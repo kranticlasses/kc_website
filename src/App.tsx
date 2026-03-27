@@ -15,6 +15,7 @@ import BlogPost from './pages/blog/BlogPost';
 import PrivacyPolicy from './pages/legal/PrivacyPolicy';
 import TermsConditions from './pages/legal/TermsConditions';
 import RefundPolicy from './pages/legal/RefundPolicy';
+import IlakrantiGupta from './pages/faculty/IlakrantiGupta';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="courses" element={<Courses />} />
           <Route path="faculty" element={<Faculty />} />
+          <Route path="faculty/ilakranti-gupta" element={<IlakrantiGupta />} />
           <Route path="results" element={<Results />} />
           <Route path="contact" element={<Contact />} />
           <Route path="parents" element={<Parents />} />
