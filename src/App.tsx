@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import Parents from './pages/Parents';
 import Scholarship from './pages/Scholarship';
 import Admissions from './pages/Admissions';
+import Downloads from './pages/Downloads';
 import BlogList from './pages/blog/BlogList';
 import BlogPost from './pages/blog/BlogPost';
 import PrivacyPolicy from './pages/legal/PrivacyPolicy';
@@ -29,6 +30,7 @@ function App() {
           <Route path="parents" element={<Parents />} />
           <Route path="scholarship" element={<Scholarship />} />
           <Route path="admissions" element={<Admissions />} />
+          <Route path="resources" element={<Downloads />} />
           <Route path="blog" element={<BlogList />} />
           <Route path="blog/:id" element={<BlogPost />} />
           <Route path="legal/privacy-policy" element={<PrivacyPolicy />} />
