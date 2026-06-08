@@ -68,7 +68,7 @@ const AnnouncementPopup: React.FC = () => {
                   className="text-2xl sm:text-3xl font-extrabold text-gray-900 leading-tight"
                 >
                   Admission Open
-                  <span className="block text-red-600 mt-1 text-xl sm:text-2xl">New Batch Starting 1 April</span>
+                  <span className="block text-red-600 mt-1 text-xl sm:text-2xl">New Batch Starts 15 June 2026</span>
                 </motion.h2>
 
                 <motion.div

@@ -3,6 +3,7 @@ import Hero from '../components/sections/Hero';
 import TrustBar from '../components/sections/TrustBar';
 import CourseOverview from '../components/sections/CourseOverview';
 import ToppersSpotlight from '../components/sections/ToppersSpotlight';
+import ParentTestimonials from '../components/sections/ParentTestimonials';
 import AnnouncementPopup from '../components/AnnouncementPopup';
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
                 <AnnouncementPopup />
                 <Hero />
                 <TrustBar />
+                <ParentTestimonials />
                 <CourseOverview />
                 <ToppersSpotlight />
             </main>
