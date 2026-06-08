@@ -1,8 +1,39 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import Button from '../ui/Button';
-import { ArrowRight, MessageCircle } from 'lucide-react';
+import { ArrowRight, MessageCircle, ChevronLeft, ChevronRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Hero = () => {
+    const images = [
+        {
+            src: "/IlakrantiFaculty.webp",
+            alt: "Students and teacher at Kranti Classes in Ahmedabad preparing for JEE, NEET and board exams",
+            fit: "object-cover object-top"
+        },
+        {
+            src: "/Results.webp",
+            alt: "Kranti Classes results and student achievements",
+            fit: "object-contain"
+        }
+    ];
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % images.length);
+        }, 5000);
+        return () => clearInterval(timer);
+    }, [images.length]);
+
+    const nextSlide = () => {
+        setCurrentIndex((prev) => (prev + 1) % images.length);
+    };
+
+    const prevSlide = () => {
+        setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+    };
+
     return (
         <section className="relative bg-gradient-to-br from-blue-900 to-blue-800 text-white overflow-hidden">
             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-10"></div>
@@ -34,13 +65,58 @@ const Hero = () => {
                     </div>
 
                     <div className="md:w-1/2 flex justify-center">
-                        <div className="relative w-80 h-full aspect-square">
-                            <div className="absolute -inset-4 bg-orange-500 rounded-full opacity-20 blur-2xl animate-pulse"></div>
-                            <img
-                                src="/IlakrantiFaculty.webp"
-                                alt="Students and teacher at Kranti Classes in Ahmedabad preparing for JEE, NEET and board exams"
-                                className="relative rounded-2xl shadow-2xl border-4 border-white/20 max-w-md w-full transform hover:scale-105 transition-transform duration-500 object-cover object-top h-full max-h-[400px]"
-                            />
+                        <div className="relative w-full max-w-md">
+                            <div 
+                                className="relative w-80 sm:w-full mx-auto transition-[aspect-ratio] duration-500"
+                                style={{ aspectRatio: currentIndex === 0 ? '1 / 1' : '1587 / 2245' }}
+                            >
+                                <div className="absolute -inset-4 bg-orange-500 rounded-full opacity-20 blur-2xl animate-pulse"></div>
+                                
+                                <div className="relative h-full w-full rounded-2xl shadow-2xl border-4 border-white/20 overflow-hidden group">
+                                    <AnimatePresence mode="wait">
+                                        <motion.img
+                                            key={currentIndex}
+                                            src={images[currentIndex].src}
+                                            alt={images[currentIndex].alt}
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                            exit={{ opacity: 0 }}
+                                            transition={{ duration: 0.5 }}
+                                            className={`h-full w-full ${images[currentIndex].fit}`}
+                                        />
+                                    </AnimatePresence>
+
+                                    {/* Navigation Arrows */}
+                                    <button
+                                        onClick={prevSlide}
+                                        className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/30 text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black/50"
+                                        aria-label="Previous slide"
+                                    >
+                                        <ChevronLeft size={20} />
+                                    </button>
+                                    <button
+                                        onClick={nextSlide}
+                                        className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/30 text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black/50"
+                                        aria-label="Next slide"
+                                    >
+                                        <ChevronRight size={20} />
+                                    </button>
+
+                                    {/* Navigation Dots */}
+                                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                                        {images.map((_, index) => (
+                                            <button
+                                                key={index}
+                                                onClick={() => setCurrentIndex(index)}
+                                                className={`w-2 h-2 rounded-full transition-all ${
+                                                    index === currentIndex ? "bg-white w-4" : "bg-white/50"
+                                                }`}
+                                                aria-label={`Go to slide ${index + 1}`}
+                                            />
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -50,3 +126,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
